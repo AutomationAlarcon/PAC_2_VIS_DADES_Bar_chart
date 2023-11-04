@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 file_path = 'world_data_2023.csv'
 df = pd.read_csv(file_path, sep=",", skipinitialspace=True)
 
@@ -18,7 +19,7 @@ print(df2.head(10))
 plt.figure(figsize=(10,10))
 
 bars = plt.barh(df2["Country"], df2["Life expectancy"], color='lightgray')
-plt.title('The ten countries with more life expectancy', fontsize=20)
+plt.title('The 10 countries with more life expectancy', fontsize=20)
 plt.xlim(65, 88)
 plt.xlabel('Life expectancy (Years)', fontsize=20)
 plt.ylabel('Countries', fontsize=20)
