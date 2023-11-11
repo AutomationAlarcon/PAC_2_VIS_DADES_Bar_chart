@@ -16,7 +16,7 @@ print(df2.head(10))
 plt.figure(figsize=(10,10))
 
 bars = plt.barh(df2["Country"], df2["Life expectancy"], color='lightgray')
-plt.title('The 10 countries with the highest life expectancy', fontsize=20)
+plt.title('The 10 countries with the highest life expectancy in 2023', fontsize=20)
 plt.xlim(65, 88)
 plt.xlabel('Life expectancy (Years)', fontsize=20)
 plt.ylabel('Countries', fontsize=20)
