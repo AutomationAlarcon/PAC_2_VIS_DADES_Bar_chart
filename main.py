@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 file_path = 'world_data_2023.csv'
 df = pd.read_csv(file_path, sep=",", skipinitialspace=True)
-
 df1 = df[["Country", "Life expectancy"]]
 df1["Country"] = df1["Country"].astype("category")
 df1["Life expectancy"] = df1["Life expectancy"].astype("float")
@@ -25,11 +24,9 @@ plt.xlabel('Life expectancy (Years)', fontsize=20)
 plt.ylabel('Countries', fontsize=20)
 plt.xticks(fontsize=20)
 plt.yticks(fontsize=20)
-plt.axvline(mean_value, color="black", linestyle="dashed")
-plt.text(mean_value + 0.5, "Spain", "Global life expectancy\nmean value", fontsize=16)
 
 for bar in bars:
     xval = bar.get_width()
     plt.text(xval + 0.05, bar.get_y() + bar.get_height() / 2, round(xval, 2), ha='left', va='center', fontsize=16)
 
-plt.savefig("graph_1", dpi=100, bbox_inches='tight')
+plt.savefig("life_expectancy", dpi=100, bbox_inches='tight')
